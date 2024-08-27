@@ -25,56 +25,77 @@ class _HomeScreenState extends State<HomeScreen> {
           Center(
             child: Column(
               children: [
-                TextButton(
-                  onPressed: () {
-                    print('My button is pressed');
-                  },
-                  child: Text(
-                    'This is my text button',
-                    style: TextStyle(fontSize: 20, color: Colors.red),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.grey.shade200,
+                        // hintText: 'Enter name',
+                        label: Text('Please enter your name'),
+                        border: OutlineInputBorder(),
+                        contentPadding: EdgeInsets.all(20)),
+                    // enabled: false,
+                    // maxLines: 4,
+                    // maxLength: 11,
+                    // obscureText: true,
+                    keyboardType: TextInputType.visiblePassword,
+
+                    // autofocus: true,
                   ),
                 ),
-                ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.resolveWith(
-                        (states) => Colors.blue),
-                    elevation:
-                        MaterialStateProperty.resolveWith((states) => 20),
-                  ),
-                  onPressed: () {
-                    print('my elevated button was pressed');
-                  },
-                  child: Text(
-                    'This is my elevated button',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                IconButton(onPressed: () {}, icon: Icon(Icons.add)),
-                ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: Icon(Icons.add),
-                    label: Text('Add')),
-                TextButton.icon(
-                    onPressed: () {},
-                    icon: Icon(Ionicons.desktop_outline),
-                    label: Text('Remove')),
-                ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: Icon(Iconsax.lock),
-                    label: Text('Add')),
-                Row(
-                  children: [
-                    Container(
-                        height: 200,
-                        width: 200,
-                        child: Image.asset('assets/images/flutter.png')),
-                    Container(
-                        height: 200,
-                        width: 200,
-                        child: Image.network(
-                            'https://t4.ftcdn.net/jpg/03/47/13/43/360_F_347134350_dhjJjzA1fuGvXOyNgCJYfOEby04ljhEC.jpg'))
-                  ],
-                )
+                // TextButton(
+                //   onPressed: () {
+                //     print('My button is pressed');
+                //   },
+                //   child: Text(
+                //     'This is my text button',
+                //     style: TextStyle(fontSize: 20, color: Colors.red),
+                //   ),
+                // ),
+                // ElevatedButton(
+                //   style: ButtonStyle(
+                //     backgroundColor: MaterialStateProperty.resolveWith(
+                //         (states) => Colors.blue),
+                //     elevation:
+                //         MaterialStateProperty.resolveWith((states) => 20),
+                //   ),
+                //   onPressed: () {
+                //     print('my elevated button was pressed');
+                //   },
+                //   child: Text(
+                //     'This is my elevated button',
+                //     style: TextStyle(color: Colors.white),
+                //   ),
+                // ),
+                // IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+                // ElevatedButton.icon(
+                //     onPressed: () {},
+                //     icon: Icon(Icons.add),
+                //     label: Text('Add')),
+                // TextButton.icon(
+                //   onPressed: () {},
+                //   icon: Icon(Ionicons.desktop_outline),
+                //   label: Text('Remove'),
+                // ),
+                // ElevatedButton.icon(
+                //     onPressed: () {},
+                //     icon: Icon(Iconsax.lock),
+                //     label: Text('Add')),
+                // Row(
+                //   children: [
+                //     Container(
+                //         height: 200,
+                //         width: 200,
+                //         child: Image.asset('assets/images/flutter.png')),
+                //     Container(
+                //       height: 200,
+                //       width: 200,
+                //       child: Image.network(
+                //           'https://t4.ftcdn.net/jpg/03/47/13/43/360_F_347134350_dhjJjzA1fuGvXOyNgCJYfOEby04ljhEC.jpg'),
+                //     ),
+                //   ],
+                // )
               ],
             ),
           ),
